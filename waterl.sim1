@@ -1,0 +1,121 @@
+<circuit version="1.0.0-SR0" rev="1320" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="AudioOut" CircId="AudioOut-263" mainComp="false" Show_id="false" Show_Val="false" Pos="44,0" rotation="0" hflip="1" vflip="1" label="AudioOut-263" idLabPos="-20,-36" labelrot="0" valLabPos="-16,20" valLabRot="0" Buzzer="false" Impedance="8 Ω" />
+
+<item itemtype="Capacitor" CircId="Capacitor-266" mainComp="false" ShowProp="Capacitance" Show_id="false" Show_Val="true" Pos="0,-32" rotation="0" hflip="1" vflip="1" label="Capacitor-266" idLabPos="-16,-24" labelrot="0" valLabPos="-12,6" valLabRot="0" Capacitance="20 µF" Resistance="1e-06 Ω" InitVolt="0 V" AutoStep="0 _Steps" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-267" mainComp="false" Show_id="false" Show_Val="false" Pos="-88,-200" rotation="0" hflip="-1" vflip="1" label="Fixed Voltage-267" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Out="true" Voltage="5 V" />
+
+<item itemtype="Subcircuit" CircId="Nano-270" mainComp="false" Show_id="true" Show_Val="false" Pos="-84,-28" rotation="90" hflip="1" vflip="1" label="Nano-270" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps itemtype="MCU" CircId="1_m328 TQFP-269" mainComp="true" Show_id="false" Show_Val="false" Pos="20,20" rotation="0" hflip="1" vflip="1" label="1_m328 TQFP-269" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="oled.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
+</item>
+
+<item itemtype="SR04" CircId="SR04-271" mainComp="false" Show_id="false" Show_Val="false" Pos="-32,-132" rotation="0" hflip="1" vflip="1" label="SR04-271" idLabPos="-16,-48" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Ground" CircId="Ground-274" mainComp="false" Show_id="false" Show_Val="false" Pos="-200,-136" rotation="0" hflip="1" vflip="1" label="Ground-274" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="ResistorDip" CircId="ResistorDip-275" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-128,-56" rotation="0" hflip="1" vflip="1" label="ResistorDip-275" idLabPos="-24,-40" labelrot="0" valLabPos="5,-26" valLabRot="90" Resistance="100 Ω" Size="8 _Resist." />
+
+<item itemtype="Potentiometer" CircId="Potentiometer-278" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-160,-172" rotation="0" hflip="1" vflip="1" label="Potentiometer-278" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1000 Ω" Value_Ohm="651 Ω" />
+
+<item itemtype="LedBar" CircId="LedBar-279" mainComp="false" Show_id="false" Show_Val="false" Pos="-176,-56" rotation="0" hflip="1" vflip="1" label="LedBar-279" idLabPos="-16,-44" labelrot="0" valLabPos="-16,-56" valLabRot="0" Size="8 _Leds" Color="Red" Grounded="false" Threshold="1.8 V" MaxCurrent="0.03 A" Resistance="0.6 Ω" />
+
+<item itemtype="Ssd1306" CircId="Ssd1306-413" mainComp="false" Show_id="true" Show_Val="false" Pos="152,-116" rotation="0" hflip="1" vflip="1" label="Ssd1306-413" idLabPos="-32,-63" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="White" Control_Code="60" Frequency="100 _KHz" />
+
+<item itemtype="Node" CircId="Node-264" mainComp="false" Pos="-216,-48" />
+
+<item itemtype="Node" CircId="Node-265" mainComp="false" Pos="-216,-72" />
+
+<item itemtype="Node" CircId="Node-268" mainComp="false" Pos="-216,-32" />
+
+<item itemtype="Node" CircId="Node-269" mainComp="false" Pos="-216,-56" />
+
+<item itemtype="Node" CircId="Node-272" mainComp="false" Pos="-216,-24" />
+
+<item itemtype="Node" CircId="Node-276" mainComp="false" Pos="-216,-40" />
+
+<item itemtype="Node" CircId="Node-277" mainComp="false" Pos="-216,-64" />
+
+<item itemtype="Connector" uid="connector-414" startpinid="ResistorDip-275-resistor3-ePin6" endpinid="LedBar-279-led3-pinN" pointList="-144,-56,-160,-56" />
+
+<item itemtype="Connector" uid="connector-415" startpinid="ResistorDip-275-resistor2-ePin5" endpinid="Nano-270-6" pointList="-112,-64,-56,-64,-56,24" />
+
+<item itemtype="Connector" uid="connector-416" startpinid="SR04-271-outpin" endpinid="Nano-270-2" pointList="-24,-84,-24,24" />
+
+<item itemtype="Connector" uid="connector-417" startpinid="LedBar-279-led0-pinP" endpinid="Node-265-0" pointList="-192,-80,-216,-80,-216,-72" />
+
+<item itemtype="Connector" uid="connector-418" startpinid="AudioOut-263-lPin" endpinid="Capacitor-266-rPin" pointList="28,-8,16,-8,16,-32" />
+
+<item itemtype="Connector" uid="connector-419" startpinid="Node-276-2" endpinid="Node-268-0" pointList="-216,-40,-216,-32" />
+
+<item itemtype="Connector" uid="connector-420" startpinid="SR04-271-trigpin" endpinid="Nano-270-3" pointList="-32,-84,-32,24" />
+
+<item itemtype="Connector" uid="connector-421" startpinid="LedBar-279-led0-pinN" endpinid="ResistorDip-275-resistor0-ePin0" pointList="-160,-80,-144,-80" />
+
+<item itemtype="Connector" uid="connector-422" startpinid="ResistorDip-275-resistor1-ePin2" endpinid="LedBar-279-led1-pinN" pointList="-144,-72,-160,-72" />
+
+<item itemtype="Connector" uid="connector-423" startpinid="ResistorDip-275-resistor6-ePin13" endpinid="Nano-270-10" pointList="-112,-32,-88,-32,-88,24" />
+
+<item itemtype="Connector" uid="connector-424" startpinid="Capacitor-266-lPin" endpinid="Nano-270-11" pointList="-16,-32,-16,-12,-96,-12,-96,24" />
+
+<item itemtype="Connector" uid="connector-425" startpinid="ResistorDip-275-resistor3-ePin7" endpinid="Nano-270-7" pointList="-112,-56,-64,-56,-64,24" />
+
+<item itemtype="Connector" uid="connector-426" startpinid="ResistorDip-275-resistor0-ePin1" endpinid="Nano-270-4" pointList="-112,-80,-40,-80,-40,24" />
+
+<item itemtype="Connector" uid="connector-427" startpinid="Potentiometer-278-PinA" endpinid="Ground-274-Gnd" pointList="-176,-172,-200,-172,-200,-152" />
+
+<item itemtype="Connector" uid="connector-428" startpinid="Node-269-2" endpinid="Node-264-0" pointList="-216,-56,-216,-48" />
+
+<item itemtype="Connector" uid="connector-429" startpinid="ResistorDip-275-resistor7-ePin14" endpinid="LedBar-279-led7-pinN" pointList="-144,-24,-160,-24" />
+
+<item itemtype="Connector" uid="connector-430" startpinid="LedBar-279-led4-pinP" endpinid="Node-264-1" pointList="-192,-48,-216,-48" />
+
+<item itemtype="Connector" uid="connector-431" startpinid="ResistorDip-275-resistor7-ePin15" endpinid="Nano-270-12" pointList="-112,-24,-104,-24,-104,24" />
+
+<item itemtype="Connector" uid="connector-432" startpinid="ResistorDip-275-resistor1-ePin3" endpinid="Nano-270-5" pointList="-112,-72,-48,-72,-48,24" />
+
+<item itemtype="Connector" uid="connector-433" startpinid="ResistorDip-275-resistor4-ePin8" endpinid="LedBar-279-led4-pinN" pointList="-144,-48,-160,-48" />
+
+<item itemtype="Connector" uid="connector-434" startpinid="LedBar-279-led1-pinP" endpinid="Node-265-1" pointList="-192,-72,-216,-72" />
+
+<item itemtype="Connector" uid="connector-435" startpinid="Fixed Voltage-267-outnod" endpinid="Potentiometer-278-PinB" pointList="-104,-200,-104,-172,-144,-172" />
+
+<item itemtype="Connector" uid="connector-436" startpinid="LedBar-279-led6-pinP" endpinid="Node-268-1" pointList="-192,-32,-216,-32" />
+
+<item itemtype="Connector" uid="connector-437" startpinid="LedBar-279-led2-pinP" endpinid="Node-277-1" pointList="-192,-64,-216,-64" />
+
+<item itemtype="Connector" uid="connector-438" startpinid="AudioOut-263-rPin" endpinid="Nano-270-GND0" pointList="28,0,-16,0,-16,24" />
+
+<item itemtype="Connector" uid="connector-439" startpinid="Node-264-2" endpinid="Node-276-0" pointList="-216,-48,-216,-40" />
+
+<item itemtype="Connector" uid="connector-440" startpinid="ResistorDip-275-resistor6-ePin12" endpinid="LedBar-279-led6-pinN" pointList="-144,-32,-160,-32" />
+
+<item itemtype="Connector" uid="connector-441" startpinid="ResistorDip-275-resistor5-ePin10" endpinid="LedBar-279-led5-pinN" pointList="-144,-40,-160,-40" />
+
+<item itemtype="Connector" uid="connector-442" startpinid="Node-277-2" endpinid="Node-269-0" pointList="-216,-64,-216,-56" />
+
+<item itemtype="Connector" uid="connector-443" startpinid="ResistorDip-275-resistor5-ePin11" endpinid="Nano-270-9" pointList="-112,-40,-80,-40,-80,24" />
+
+<item itemtype="Connector" uid="connector-444" startpinid="LedBar-279-led7-pinP" endpinid="Node-272-1" pointList="-192,-24,-216,-24" />
+
+<item itemtype="Connector" uid="connector-445" startpinid="ResistorDip-275-resistor2-ePin4" endpinid="LedBar-279-led2-pinN" pointList="-144,-64,-160,-64" />
+
+<item itemtype="Connector" uid="connector-446" startpinid="LedBar-279-led3-pinP" endpinid="Node-269-1" pointList="-192,-56,-216,-56" />
+
+<item itemtype="Connector" uid="connector-447" startpinid="Potentiometer-278-PinM" endpinid="SR04-271-inpin" pointList="-160,-156,-120,-156" />
+
+<item itemtype="Connector" uid="connector-448" startpinid="Node-272-2" endpinid="Nano-270-5V0" pointList="-216,-24,-216,100,-16,100,-16,72" />
+
+<item itemtype="Connector" uid="connector-449" startpinid="Node-268-2" endpinid="Node-272-0" pointList="-216,-32,-216,-24" />
+
+<item itemtype="Connector" uid="connector-450" startpinid="ResistorDip-275-resistor4-ePin9" endpinid="Nano-270-8" pointList="-112,-48,-72,-48,-72,24" />
+
+<item itemtype="Connector" uid="connector-451" startpinid="LedBar-279-led5-pinP" endpinid="Node-276-1" pointList="-192,-40,-216,-40" />
+
+<item itemtype="Connector" uid="connector-452" startpinid="Node-265-2" endpinid="Node-277-0" pointList="-216,-72,-216,-64" />
+
+<item itemtype="Connector" uid="connector-453" startpinid="Ssd1306-413-PinSck" endpinid="Nano-270-A5" pointList="104,-68,104,108,-40,108,-40,72" />
+
+<item itemtype="Connector" uid="connector-454" startpinid="Ssd1306-413-PinSda" endpinid="Nano-270-A4" pointList="112,-68,112,112,-48,112,-48,72" />
+
+</circuit>
